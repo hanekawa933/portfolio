@@ -1,0 +1,32 @@
+:root {
+  --primaryColor: #0a1931;
+  --secondaryColor: #185adb;
+  --buttonColor: #ffc947;
+  --textColor: #feddbe;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fafafa;
+  background: var(--primaryColor);
+}
+
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+object {
+  pointer-events: none;
+}
