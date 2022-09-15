@@ -148,7 +148,7 @@ const Home: NextPage = () => {
         transition="0.4s ease-in"
       >
         {/*  Homepage */}
-        <Box as="section" px="4" id="hero">
+        <Box as="section" px={["0", "4"]} id="hero">
           <Text as="span" fontFamily="mono" color="yellow.300">
             Hi, my name is
           </Text>
@@ -309,7 +309,7 @@ const Home: NextPage = () => {
         </Box>
 
         {/*  My Experience */}
-        <Box px="4" py="12" mt="12" id="experience">
+        <Box py="12" mt="12" id="experience">
           <SectionTitle section={{ number: "02", title: "My Experience" }} />
           <Box>
             <Tabs variant="line" colorScheme="yellow">
@@ -344,13 +344,13 @@ const Home: NextPage = () => {
         </Box>
 
         {/*  My Projects */}
-        <Box px="4" py="12" mt="12" id="project">
+        <Box py="12" mt="12" id="project">
           <SectionTitle section={{ number: "03", title: "My Projects" }} />
           <Box>{projectElem}</Box>
         </Box>
 
         {/*  Contact */}
-        <Box px="4" py="12" mt="12" id="contact">
+        <Box py="12" mt="12" id="contact">
           <SectionTitle section={{ number: "04", title: "Contact" }} />
           <Box as="h1" fontSize="4xl" fontWeight="bold" textAlign="center">
             Get In Touch

@@ -41,8 +41,8 @@ const Project: NextPage<{ project: Props }> = ({
         marginLeft={textPosition}
         background={["gray.900", "gray.900", "none"]}
         borderRadius="lg"
-        p={["12", "12", "0"]}
-        py={["12", "12", "12"]}
+        p={["4", "12", "0"]}
+        py={["4", "12", "12"]}
         opacity="0.95"
       >
         <Box
@@ -106,7 +106,11 @@ const Project: NextPage<{ project: Props }> = ({
             mt="4"
             display="flex"
             alignItems="center"
-            justifyContent={direction === "left" ? "flex-end" : "flex-start"}
+            justifyContent={
+              direction === "left"
+                ? "flex-end"
+                : ["flex-end", "flex-end", "flex-start"]
+            }
             gap="2"
           >
             <a href={link} target="_blank" rel="noreferrer">
