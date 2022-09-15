@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Header from "../components/Header";
+import Head from "next/head";
 import SectionTitle from "../components/SectionTitle";
 import {
   Box,
@@ -134,6 +135,9 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Portfolio | Iqbal Ramadhan</title>
+      </Head>
       <Header />
       <Box
         as="main"

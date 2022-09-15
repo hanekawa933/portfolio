@@ -24,6 +24,7 @@ const Project: NextPage<{ project: Props }> = ({
 }) => {
   const textPosition =
     direction === "left" ? ["0", "0", "30%", "50%"] : ["0", "0", "0", "0"];
+
   const textAlignPosition =
     direction === "left" ? ["left", "left", "right"] : ["left", "left", "left"];
 
@@ -44,15 +45,35 @@ const Project: NextPage<{ project: Props }> = ({
         py={["12", "12", "12"]}
         opacity="0.95"
       >
-        <Box fontFamily="mono" color="yellow.300" textAlign={textAlignPosition}>
+        <Box
+          fontFamily="mono"
+          color="yellow.300"
+          textAlign={
+            direction === "left"
+              ? ["left", "left", "right"]
+              : ["left", "left", "left"]
+          }
+        >
           {type}
         </Box>
-        <Box fontSize="1.4rem" fontWeight="bold" textAlign={textAlignPosition}>
+        <Box
+          fontSize="1.4rem"
+          fontWeight="bold"
+          textAlign={
+            direction === "left"
+              ? ["left", "left", "right"]
+              : ["left", "left", "left"]
+          }
+        >
           {name}
         </Box>
         <Box
           mt="8"
-          textAlign={textAlignPosition}
+          textAlign={
+            direction === "left"
+              ? ["left", "left", "right"]
+              : ["left", "left", "left"]
+          }
           background={["none", "none", "gray.900"]}
           borderRadius="lg"
           p={["0", "0", "6"]}
@@ -77,7 +98,11 @@ const Project: NextPage<{ project: Props }> = ({
         </Box>
         {link && (
           <Box
-            textAlign={textAlignPosition}
+            textAlign={
+              direction === "left"
+                ? ["left", "left", "right"]
+                : ["left", "left", "left"]
+            }
             mt="4"
             display="flex"
             alignItems="center"
