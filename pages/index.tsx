@@ -181,14 +181,22 @@ const Home: NextPage = () => {
             </Text>
           </Box>
           <Box display="flex" gap="4" mt="10">
-            <Button colorScheme="yellow" size="lg" fontFamily="mono">
+            <Button
+              colorScheme="yellow"
+              size={["md", "lg"]}
+              fontFamily="mono"
+              as="a"
+              href="#contact"
+            >
               Contact Me
             </Button>
             <Button
               colorScheme="yellow"
               variant="outline"
-              size="lg"
+              size={["md", "lg"]}
               fontFamily="mono"
+              as="a"
+              href="#about"
             >
               Show More
             </Button>
@@ -196,7 +204,7 @@ const Home: NextPage = () => {
         </Box>
 
         {/*  About Me */}
-        <Box as="section" py="12" mt="36" id="about">
+        <Box as="section" py="24" mt="24" id="about">
           <Box
             fontSize="lg"
             display="flex"
@@ -309,7 +317,7 @@ const Home: NextPage = () => {
         </Box>
 
         {/*  My Experience */}
-        <Box py="12" mt="12" id="experience">
+        <Box py="24" id="experience">
           <SectionTitle section={{ number: "02", title: "My Experience" }} />
           <Box>
             <Tabs variant="line" colorScheme="yellow">
@@ -344,13 +352,13 @@ const Home: NextPage = () => {
         </Box>
 
         {/*  My Projects */}
-        <Box py="12" mt="12" id="project">
+        <Box py="24" id="project">
           <SectionTitle section={{ number: "03", title: "My Projects" }} />
           <Box>{projectElem}</Box>
         </Box>
 
         {/*  Contact */}
-        <Box py="12" mt="12" id="contact">
+        <Box py="24" id="contact">
           <SectionTitle section={{ number: "04", title: "Contact" }} />
           <Box as="h1" fontSize="4xl" fontWeight="bold" textAlign="center">
             Get In Touch

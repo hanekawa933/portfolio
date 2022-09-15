@@ -35,7 +35,7 @@ const Project: NextPage<{ project: Props }> = ({
       <Box
         width={["", "", "70%", "50%"]}
         height="100%"
-        zIndex="999"
+        zIndex="777"
         gridColumn="1 / -1"
         gridRow="1 / -1"
         marginLeft={textPosition}

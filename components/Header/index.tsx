@@ -5,7 +5,9 @@ import { useState, useEffect } from "react";
 
 const Header: NextPage = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const [scroll, setScroll] = useState<boolean>(false);
   const [cw, setCw] = useState<number>(0);
+  const [ch, setCh] = useState<number>(0);
 
   const onClick = () => {
     setOpen(!open);
@@ -24,12 +26,25 @@ const Header: NextPage = () => {
       setCw(window?.innerWidth);
     }
 
-    window.addEventListener("resize", setWindowSize);
-
-    if (cw > 769) {
-      setOpen(false);
+    function getScroll() {
+      setCh(window?.scrollY);
     }
-  }, [open, cw]);
+
+    window.addEventListener("resize", setWindowSize);
+    window.addEventListener("scroll", getScroll);
+
+    if (!open) {
+      if (cw > 769) {
+        setOpen(false);
+      }
+    }
+
+    if (ch >= 80) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  }, [open, ch, cw]);
 
   const isOpen = open === false ? "-500" : "0";
 
@@ -39,9 +54,13 @@ const Header: NextPage = () => {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      w="90%"
-      m="auto"
+      w="100%"
+      px={["5", "10", "20"]}
       h="20"
+      background={scroll ? "gray.900" : "transparent"}
+      position="sticky"
+      top="0"
+      zIndex="999"
     >
       <Box
         fontWeight="bold"
