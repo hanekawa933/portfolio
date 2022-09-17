@@ -8,7 +8,13 @@ interface Props {
 
 const SectionTitle: NextPage<{ section: Props }> = ({ section }) => {
   return (
-    <Box display="flex" gap="5" alignItems="center" mb="4">
+    <Box
+      display="flex"
+      gap="5"
+      alignItems="center"
+      mb="4"
+      data-aos="fade-right"
+    >
       <Box color="yellow.300" fontFamily="mono">
         {section.number}
       </Box>

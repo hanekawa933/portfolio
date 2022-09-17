@@ -68,7 +68,8 @@ const Header: NextPage = () => {
         fontFamily="mono"
         fontSize="1.3rem"
         as="a"
-        href="#hero"
+        href="#"
+        className="text-welcome-header-5"
       >
         Iqbal
       </Box>
@@ -175,7 +176,7 @@ const Header: NextPage = () => {
         as="nav"
         gap={["4", "4", "4", "8"]}
       >
-        <Box fontFamily="mono">
+        <Box fontFamily="mono" className="text-welcome-header-1">
           <a href="#about">
             <Box as="span" color="yellow.300">
               01.
@@ -183,7 +184,7 @@ const Header: NextPage = () => {
             About
           </a>
         </Box>
-        <Box fontFamily="mono">
+        <Box fontFamily="mono" className="text-welcome-header-2">
           <a href="#experience">
             <Box as="span" color="yellow.300">
               02.
@@ -191,7 +192,7 @@ const Header: NextPage = () => {
             Experience
           </a>
         </Box>
-        <Box fontFamily="mono">
+        <Box fontFamily="mono" className="text-welcome-header-3">
           <a href="#project">
             <Box as="span" color="yellow.300">
               03.
@@ -199,7 +200,7 @@ const Header: NextPage = () => {
             Project
           </a>
         </Box>
-        <Box fontFamily="mono">
+        <Box fontFamily="mono" className="text-welcome-header-4">
           <a href="#contact">
             <Box as="span" color="yellow.300">
               04.
@@ -207,7 +208,7 @@ const Header: NextPage = () => {
             Contact
           </a>
         </Box>
-        <Box fontFamily="mono">
+        <Box fontFamily="mono" className="text-welcome-header-5">
           <Button
             as="a"
             colorScheme="yellow"

@@ -1,7 +1,10 @@
 import type { NextPage } from "next";
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Head from "next/head";
 import SectionTitle from "../components/SectionTitle";
+import Aos from "aos";
+
 import {
   Box,
   Text,
@@ -133,6 +136,10 @@ const Home: NextPage = () => {
     return <Project project={{ project: dir }} key={idx} />;
   });
 
+  useEffect(() => {
+    Aos.init({ once: true });
+  });
+
   return (
     <>
       <Head>
@@ -158,6 +165,7 @@ const Home: NextPage = () => {
             fontSize={["2xl", "4xl", "5xl", "6xl"]}
             fontWeight="bold"
             mt="4"
+            className="text-welcome-heading"
           >
             Iqbal Ramadhan.
           </Text>
@@ -167,10 +175,11 @@ const Home: NextPage = () => {
             fontWeight="bold"
             color="gray.400"
             mt="1"
+            className="text-welcome-heading"
           >
             I build things with love and passion.
           </Text>
-          <Box w={["100%", "100%", "70%"]}>
+          <Box w={["100%", "100%", "70%"]} className="text-welcome-text">
             <Text as="p" color="gray.400" mt="5" fontSize="lg">
               I am a fresh graduation computer science student specializing in{" "}
               <Box as="span" color="yellow.300">
@@ -180,7 +189,7 @@ const Home: NextPage = () => {
               have an amazing work with you!
             </Text>
           </Box>
-          <Box display="flex" gap="4" mt="10">
+          <Box display="flex" gap="4" mt="10" className="text-welcome-text">
             <Button
               colorScheme="yellow"
               size={["md", "lg"]}
@@ -213,7 +222,7 @@ const Home: NextPage = () => {
           >
             <Box width={["100%", "100%", "100%", "60%"]}>
               <SectionTitle section={{ number: "01", title: "About Me" }} />
-              <Box color="gray.400">
+              <Box color="gray.400" data-aos="fade-right">
                 Hello! My name is Muhammad Iqbal Ramadhan and I enjoy doing
                 things on the internet. I grow up with computers that is why i
                 choose computer science degree here at Kalbis Institute.
@@ -264,7 +273,12 @@ const Home: NextPage = () => {
                 </Box>
               </Box>
             </Box>
-            <Box width={["70%", "70%", "70%", "40%"]} mx="auto" mt="10">
+            <Box
+              width={["70%", "70%", "70%", "40%"]}
+              mx="auto"
+              mt="10"
+              data-aos="fade-left"
+            >
               <Box
                 position="relative"
                 width="100%"
@@ -321,10 +335,14 @@ const Home: NextPage = () => {
           <SectionTitle section={{ number: "02", title: "My Experience" }} />
           <Box>
             <Tabs variant="line" colorScheme="yellow">
-              <TabList display="grid" gridTemplateColumns="repeat(2, 1fr)">
+              <TabList
+                display="grid"
+                gridTemplateColumns="repeat(2, 1fr)"
+                data-aos="fade-right"
+              >
                 <Tab>Bank Mandiri</Tab>
               </TabList>
-              <TabPanels>
+              <TabPanels data-aos="fade-right">
                 <TabPanel color="gray.400">
                   <Box as="span" fontFamily="mono" color="yellow.300">
                     Internship
@@ -370,12 +388,13 @@ const Home: NextPage = () => {
             textAlign="center"
             width={["90%", "90%", "80%", "70%"]}
             mx="auto"
+            data-aos="zoom-in"
           >
             As of now, I am currently looking for a job anything related to my
             skills. If you are interested to work with me, just contact me
             below.
           </Box>
-          <Box display="flex" justifyContent="center" mt="8">
+          <Box display="flex" justifyContent="center" mt="8" data-aos="zoom-in">
             <Button
               as="a"
               variant="outline"

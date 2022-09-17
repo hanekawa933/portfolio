@@ -10,3 +10,51 @@ html {
 .active {
   filter: blur(5px);
 }
+
+.text-welcome-heading {
+  animation: transitionIn 0.5s;
+}
+
+.text-welcome-text {
+  animation: transitionIn 0.8s;
+}
+
+.text-welcome-header-1 {
+  animation: transitionInDown 0.5s;
+}
+.text-welcome-header-2 {
+  animation: transitionInDown 0.7s;
+}
+.text-welcome-header-3 {
+  animation: transitionInDown 0.8s;
+}
+.text-welcome-header-4 {
+  animation: transitionInDown 1s;
+}
+.text-welcome-header-5 {
+  animation: transitionInDown 1.2s;
+}
+
+@keyframes transitionInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

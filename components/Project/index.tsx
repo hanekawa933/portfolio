@@ -25,8 +25,8 @@ const Project: NextPage<{ project: Props }> = ({
   const textPosition =
     direction === "left" ? ["0", "0", "30%", "50%"] : ["0", "0", "0", "0"];
 
-  const textAlignPosition =
-    direction === "left" ? ["left", "left", "right"] : ["left", "left", "left"];
+  const fadePosition = direction === "left" ? "fade-left" : "fade-right";
+  const fadeImagePosition = direction === "left" ? "fade-right" : "fade-left";
 
   const imagePosition = direction === "left" ? "0" : ["0", "0", "50%", "40%"];
 
@@ -44,6 +44,7 @@ const Project: NextPage<{ project: Props }> = ({
         p={["4", "12", "0"]}
         py={["4", "12", "12"]}
         opacity="0.95"
+        data-aos={fadePosition}
       >
         <Box
           fontFamily="mono"
@@ -128,6 +129,7 @@ const Project: NextPage<{ project: Props }> = ({
         gridColumn="1 / -1"
         gridRow="1 / -1"
         marginLeft={imagePosition}
+        data-aos={fadeImagePosition}
       >
         <Image
           src={image}
