@@ -153,6 +153,7 @@ const Home: NextPage = () => {
         mt="16"
         id="active"
         transition="0.4s ease-in"
+        overflowX="hidden"
       >
         {/*  Homepage */}
         <Box as="section" px={["0", "4"]} id="hero">
