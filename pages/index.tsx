@@ -343,6 +343,7 @@ const Home: NextPage = () => {
                 data-aos="fade-right"
               >
                 <Tab>Bank Mandiri</Tab>
+                <Tab>PT Central Mega Kencana</Tab>
               </TabList>
               <TabPanels data-aos="fade-right">
                 <TabPanel color="gray.400">
