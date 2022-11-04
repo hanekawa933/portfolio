@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import { useEffect } from "react";
-import Header from "../components/Header";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("../components/Header"));
+const SectionTitle = dynamic(() => import("../components/SectionTitle"));
 import Head from "next/head";
-import SectionTitle from "../components/SectionTitle";
 import Aos from "aos";
 
 import {
@@ -365,6 +366,25 @@ const Home: NextPage = () => {
                     </ListItem>
                   </UnorderedList>
                 </TabPanel>
+                <TabPanel color="gray.400">
+                  <Box as="span" fontFamily="mono" color="yellow.300">
+                    Work
+                  </Box>
+                  <Box fontWeight="semibold" fontSize="xl" color="gray.200">
+                    Front-end developer at{" "}
+                    <Box as="span" color="yellow.300">
+                      PT Central Mega Kencana
+                    </Box>
+                  </Box>
+                  <Box fontFamily="mono" mt="2">
+                    14 October 2022 - Now
+                  </Box>
+                  <UnorderedList mt="4">
+                    <ListItem>Create a website for front-end</ListItem>
+                    <ListItem>Revamp the old existing website</ListItem>
+                    <ListItem>Create good UI/UX designs for users.</ListItem>
+                  </UnorderedList>
+                </TabPanel>
               </TabPanels>
             </Tabs>
           </Box>
@@ -391,9 +411,8 @@ const Home: NextPage = () => {
             mx="auto"
             data-aos="zoom-in"
           >
-            As of now, I am currently looking for a job anything related to my
-            skills. If you are interested to work with me, just contact me
-            below.
+            As of now, I am not looking for a job. But we still can get in
+            touch! just contact me below.
           </Box>
           <Box display="flex" justifyContent="center" mt="8" data-aos="zoom-in">
             <Button
