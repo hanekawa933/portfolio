@@ -187,8 +187,8 @@ const Home: NextPage = () => {
               <Box as="span" color="yellow.300">
                 building modern website from back to front
               </Box>
-              . Currently searching for job experience and looking forward to
-              have an amazing work with you!
+              . Currently work at PT Central Mega Kencana as a front-end
+              developer.
             </Text>
           </Box>
           <Box display="flex" gap="4" mt="10" className="text-welcome-text">
